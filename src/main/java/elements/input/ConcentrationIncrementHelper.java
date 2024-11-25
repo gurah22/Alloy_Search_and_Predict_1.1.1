@@ -1,6 +1,6 @@
 package elements.input;
 
-import javax.validation.ValidationException;
+import jakarta.validation.ValidationException;
 
 public class ConcentrationIncrementHelper {
     private static final double TOTAL = 1.0;

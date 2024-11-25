@@ -3,7 +3,7 @@ package elements.controllers;
 import elements.calculations.Element;
 import elements.calculations.ElementData;
 
-import javax.validation.ValidationException;
+import jakarta.validation.ValidationException;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;

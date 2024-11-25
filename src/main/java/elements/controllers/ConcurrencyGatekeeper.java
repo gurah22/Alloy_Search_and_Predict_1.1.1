@@ -2,7 +2,7 @@ package elements.controllers;
 
 import org.springframework.stereotype.Component;
 
-import javax.validation.ValidationException;
+import jakarta.validation.ValidationException;
 import java.util.concurrent.atomic.AtomicReference;
 
 @Component

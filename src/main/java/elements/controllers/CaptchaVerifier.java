@@ -1,8 +1,9 @@
 package elements.controllers;
 
-import com.mashape.unirest.http.Unirest;
+import kong.unirest.Unirest;
 
-import javax.validation.ValidationException;
+
+import jakarta.validation.ValidationException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,9 +16,7 @@ public class CaptchaVerifier {
     private static final String CAPTCHA_KEY = "6Le-5wcTAAAAAGdK6kFP6ZgHUCbXVZ_LDBEUUdNF";
     private static final String CAPTCHA_KEY_PUBLIC = "6Le-5wcTAAAAALZY9IW0S409JmECaYDxdK6xnYYx";
 
-    public static void verifyCaptcha(String gCaptchaResponse,
-                                     String remoteAddress) throws Exception {
-
+    public static void verifyCaptcha(String gCaptchaResponse, String remoteAddress) throws Exception {
         boolean disableCaptcha = Boolean.parseBoolean(System.getProperty("disable.captcha"));
         if (disableCaptcha) {
             LOG.log(Level.SEVERE, "Captcha is disabled");

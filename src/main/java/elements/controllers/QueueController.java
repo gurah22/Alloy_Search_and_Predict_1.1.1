@@ -8,14 +8,15 @@ import elements.requests.RequestLogger;
 import elements.requests.RequestType;
 import org.joda.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.PostConstruct;
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.validation.ValidationException;
+import jakarta.annotation.PostConstruct;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.validation.ValidationException;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
@@ -41,6 +42,7 @@ public class QueueController {
             .build();
 
     @Autowired
+    @Lazy
     private SearchController searchController;
 
     @Autowired
